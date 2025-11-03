@@ -345,18 +345,6 @@
             document.getElementById('pending-count').textContent = pending;
             document.getElementById('preparing-count').textContent = preparing;
         }
-        function updateTodaysOrders() {
-    $.ajax({
-        url: "{{ route('chef.fetchTodaysOrders') }}",
-        method: "GET",
-        success: function(response) {
-            if (response.success) {
-                $("#todays-orders-count").text(response.todaysOrders);
-            }
-        }
-    });
-}
-
 
         function loadOrders() {
             fetch(`{{ route('chef.fetchOrders') }}`)
