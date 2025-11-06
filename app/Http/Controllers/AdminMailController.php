@@ -14,6 +14,7 @@ class AdminMailController extends Controller
         $users = Users::select('id', 'email')->get();
         return view('sendMail', compact('users'));
     }
+    
 
     public function sendMail(Request $request)
     {
